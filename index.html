@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <h2>Simple Diabetes Prediction </h2>
+    <form method="POST">
+        <label>Age:</label>
+        <input type="number" name="Age" step="1" required><br></br>
+
+        <label>BMI</label>
+        <input type="number"><br></br>
+
+        <label>Glucose</label>
+        <input type="number" name="Glucose" step="0.1" required><br></br>
+
+
+
+        <label>Gender:</label>
+        <select name="Gender" required>
+
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+
+        </select><br><br>
+        <label>Smoker:</label>
+
+        <select name="Smoker" required>
+            <option value="Yes">Yes</option>
+
+            <option value="No">No</option>
+        </select><br><br>
+
+        <label>Family History:</label>
+        <select name="FamilyHistory" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br></br>
+
+
+        <input type="submit" value="Predict">
+
+    </form>
+
+    {% if result %}
+    Prediction: {{ result.prediction }}
+    {% endif %}
+
+
+</body>
+
+</html>
